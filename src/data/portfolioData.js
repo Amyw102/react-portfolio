@@ -103,6 +103,15 @@ export const projects = [
 
 export const education = [
   {
+    period: 'Sep 2021 — Jun 2024',
+    expected: 'High school diploma · completed',
+    institution: 'Nanjing Yuhua Tai High School',
+    qualification: 'Senior Secondary Diploma (High School Graduation Certificate)',
+    location: 'Nanjing, Jiangsu, China',
+    description:
+      'General senior-secondary education from grade 10 to grade 12, completed with the national high school graduation certificate. Three years of steady coursework — mathematics, languages and sciences — built the study habits I now rely on for programming.',
+  },
+  {
     period: 'Sep 2024 — Present',
     expected: 'Junior year · Expected June 2027',
     institution: 'Suzhou Centennial College',

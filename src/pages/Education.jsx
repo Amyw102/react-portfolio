@@ -38,11 +38,13 @@ export default function Education() {
                 </p>
                 <p className="timeline-description">{entry.description}</p>
 
-                <ul className="tag-list" aria-label="Relevant coursework">
-                  {entry.coursework.map((course) => (
-                    <li key={course}>{course}</li>
-                  ))}
-                </ul>
+                {entry.coursework && entry.coursework.length > 0 && (
+                  <ul className="tag-list" aria-label="Relevant coursework">
+                    {entry.coursework.map((course) => (
+                      <li key={course}>{course}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </article>
           ))}
