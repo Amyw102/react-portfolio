@@ -6,6 +6,8 @@ import { services, processSteps } from '../data/portfolioData.js';
 /**
  * Services page: the four areas I can help with, what each engagement
  * includes, and the four-step process I follow from brief to handover.
+ * Each card carries a local SVG illustration so the page is visual as well
+ * as descriptive, without depending on third-party image hosting.
  */
 export default function Services() {
   return (
@@ -21,6 +23,16 @@ export default function Services() {
         <div className="service-grid">
           {services.map((service) => (
             <article className="service-card" key={service.id}>
+              <figure className="service-media">
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  loading="lazy"
+                  width="800"
+                  height="420"
+                />
+              </figure>
+
               <div className="service-top">
                 <span className="service-icon">
                   <Icon name={service.icon} size={26} />

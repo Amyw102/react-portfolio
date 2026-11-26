@@ -11,7 +11,7 @@ COMP229 Web Application Development, Assignment 2.
 | About | `/about` | Legal name, portrait, short biography, key facts, skills, downloadable PDF résumé |
 | Projects | `/projects` | Three projects with image, role, outcome and technology tags |
 | Education | `/education` | Timeline of qualifications with dates and credentials, certifications, current coursework |
-| Services | `/services` | Four service offerings with icons and deliverables, four-step process |
+| Services | `/services` | Four service offerings with original SVG illustrations, icons and deliverables, four-step process |
 | Contact | `/contact` | Contact details panel and validated interactive message form |
 
 > Routing uses `HashRouter`, so the built site works when opened directly from
@@ -22,12 +22,17 @@ COMP229 Web Application Development, Assignment 2.
 - **Custom logo** — an inline SVG hexagon with a “W” monogram, used in the
   navigation bar, footer and favicon (no third-party marks).
 - **Persistent navigation** — sticky top bar with active-page indicator and a
-  full-screen mobile menu.
+  full-screen mobile menu below 820 px. The frosted header effect is painted
+  on a pseudo-element, so the fixed menu is positioned against the viewport
+  rather than clipped by the header.
 - **Working contact form** — validates first name, last name, contact number,
   email and message, stores the submission in `localStorage`, then redirects
   the visitor back to the Home page with a confirmation banner.
 - **Project imagery** — each project card carries an interface concept mockup,
   captioned on the page as such rather than presented as a live screenshot.
+- **Service illustrations** — every service card opens with an original,
+  locally drawn SVG illustration, so the page stays visual without loading
+  third-party images.
 - **Downloadable résumé** — a one-page PDF linked from the About page and the
   navigation flow.
 - **Responsive design** — fluid layout from 360 px phones to widescreen
@@ -59,7 +64,7 @@ react-portfolio/
 │   ├── favicon.svg
 │   └── resume/WuYi-Resume.pdf
 ├── src/
-│   ├── assets/               # hero background, portrait, project images
+│   ├── assets/               # hero background, portrait, project and service images
 │   ├── components/
 │   │   ├── Icon.jsx          # inline SVG icon set
 │   │   ├── Logo.jsx          # custom brand mark
@@ -86,28 +91,39 @@ live in `src/data/portfolioData.js`. Update that file to change the site without
 touching component code. Images live in `src/assets/`; the résumé PDF lives in
 `public/resume/`.
 
-## Publishing to GitHub
+## Repository and live site
 
-1. On GitHub, create a **new empty repository** named `react-portfolio`
-   (do not initialise it with a README, .gitignore or licence).
-2. From this project folder, run:
-
-```bash
-git init
-git add .
-git commit -m "React portfolio site"
-git branch -M main
-git remote add origin https://github.com/amyw102/react-portfolio.git
-git push -u origin main
-```
-
-## Live site
-
-GitHub Pages: **https://amyw102.github.io/react-portfolio/**
+- Repository: **https://github.com/amyw102/react-portfolio**
+- Published site: **https://amyw102.github.io/react-portfolio/**
 
 The published build lives in the `docs/` folder of `main`. `npm run build:docs`
 regenerates it (`vite build --outDir docs --emptyOutDir`), and GitHub Pages is
 configured under **Settings → Pages → Source: Deploy from a branch → `main` /
-`/docs`**, so the live site updates on every push. `vite.config.js` keeps
-`base: './'` and routing uses `HashRouter`, so the build also works from the
-repository sub-path without any rewrite rules.
+`/docs`**, so the live site updates on every push:
+
+```bash
+npm run build:docs
+git add .
+git commit -m "Update site and published build"
+git push origin main
+```
+
+`vite.config.js` keeps `base: './'` and routing uses `HashRouter`, so the build
+also works when opened directly from disk or from the repository sub-path.
+
+## Verification
+
+Checked on 26 November 2026 against the production build (`npm run preview`)
+in headless Microsoft Edge:
+
+- `npm run build` completes without errors; 57 modules transformed.
+- All six routes render and show their expected `<h1>` heading.
+- Every image, illustration and the résumé PDF load (the PDF returns
+  `200 application/pdf`); no broken assets or horizontal overflow at 1440 px
+  or 390 px wide.
+- The mobile menu covers the viewport below the 78 px header, lists all six
+  pages plus the contact call-to-action, and closes after navigation.
+- Submitting the empty contact form shows five inline validation messages.
+  A valid submission is stored in `localStorage`, redirects to Home and shows
+  the confirmation banner.
+- No console errors, uncaught exceptions or failed network requests.

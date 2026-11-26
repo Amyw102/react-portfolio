@@ -8,6 +8,10 @@ import heroImage from '../assets/hero-bg.jpg';
 import tokenProjectImage from '../assets/project-token.jpg';
 import registrationProjectImage from '../assets/project-registration.jpg';
 import portfolioProjectImage from '../assets/project-portfolio.jpg';
+import serviceWebImage from '../assets/service-web.svg';
+import serviceFrontendImage from '../assets/service-frontend.svg';
+import serviceDatabaseImage from '../assets/service-database.svg';
+import serviceSupportImage from '../assets/service-support.svg';
 
 export const profile = {
   firstName: 'Wu Yi',
@@ -176,6 +180,8 @@ export const services = [
       'Responsive marketing sites and small web apps built with React, semantic HTML and modern CSS — fast to load and easy to maintain.',
     deliverables: ['Landing pages', 'Multi-page sites', 'Deployment setup'],
     icon: 'browser',
+    image: serviceWebImage,
+    imageAlt: 'Illustration of a responsive marketing page inside a browser window',
   },
   {
     id: 'frontend',
@@ -185,6 +191,8 @@ export const services = [
       'Turning wireframes into pixel-clean interfaces with reusable components, sensible spacing and motion that supports the content.',
     deliverables: ['Component libraries', 'Design systems', 'Accessibility pass'],
     icon: 'layers',
+    image: serviceFrontendImage,
+    imageAlt: 'Illustration of layered interface cards being assembled',
   },
   {
     id: 'backend',
@@ -194,6 +202,8 @@ export const services = [
       'Reliable back-end logic and tidy MySQL schemas: CRUD services, validation, and queries that stay readable as the data grows.',
     deliverables: ['Schema design', 'JDBC / DAO layers', 'Data validation'],
     icon: 'database',
+    image: serviceDatabaseImage,
+    imageAlt: 'Illustration of a database stack beside a query result table',
   },
   {
     id: 'support',
@@ -203,6 +213,8 @@ export const services = [
       'Debugging, code review and documentation for student teams or small businesses that need a second pair of eyes.',
     deliverables: ['Bug fixing', 'Code review', 'Setup & handover'],
     icon: 'wrench',
+    image: serviceSupportImage,
+    imageAlt: 'Illustration of a terminal window with passing checks and a wrench',
   },
 ];
 

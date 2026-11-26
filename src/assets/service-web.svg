@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="serviceWebTitle">
+  <title id="serviceWebTitle">Browser window with a marketing page layout</title>
+  <defs>
+    <linearGradient id="webAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2c47c"/>
+      <stop offset="1" stop-color="#c67b26"/>
+    </linearGradient>
+    <linearGradient id="webTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5fd0bf"/>
+      <stop offset="1" stop-color="#2c8578"/>
+    </linearGradient>
+    <pattern id="webGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="420" fill="#0c1117"/>
+  <rect width="800" height="420" fill="url(#webGrid)"/>
+  <circle cx="690" cy="60" r="150" fill="#e9a94b" opacity="0.10"/>
+  <circle cx="90" cy="390" r="120" fill="#3bb5a3" opacity="0.08"/>
+
+  <rect x="98" y="76" width="604" height="292" rx="18" fill="#151d26" stroke="#ffffff" stroke-opacity="0.12"/>
+  <path d="M98 122h604" stroke="#ffffff" stroke-opacity="0.10"/>
+  <circle cx="124" cy="99" r="5" fill="#e9a94b"/>
+  <circle cx="143" cy="99" r="5" fill="#ffffff" opacity="0.25"/>
+  <circle cx="162" cy="99" r="5" fill="#ffffff" opacity="0.25"/>
+  <rect x="188" y="92" width="200" height="14" rx="7" fill="#ffffff" opacity="0.06"/>
+
+  <rect x="128" y="152" width="248" height="18" rx="9" fill="#ffffff" opacity="0.20"/>
+  <rect x="128" y="182" width="184" height="18" rx="9" fill="#ffffff" opacity="0.12"/>
+  <rect x="128" y="222" width="300" height="10" rx="5" fill="#ffffff" opacity="0.10"/>
+  <rect x="128" y="242" width="260" height="10" rx="5" fill="#ffffff" opacity="0.10"/>
+  <rect x="128" y="278" width="118" height="34" rx="17" fill="url(#webAmber)"/>
+  <rect x="258" y="278" width="104" height="34" rx="17" fill="none" stroke="#ffffff" stroke-opacity="0.20"/>
+
+  <rect x="460" y="152" width="210" height="160" rx="14" fill="#10171f" stroke="#ffffff" stroke-opacity="0.10"/>
+  <rect x="478" y="172" width="174" height="72" rx="8" fill="url(#webTeal)" opacity="0.85"/>
+  <rect x="478" y="258" width="120" height="10" rx="5" fill="#ffffff" opacity="0.22"/>
+  <rect x="478" y="278" width="174" height="8" rx="4" fill="#ffffff" opacity="0.10"/>
+  <rect x="478" y="294" width="150" height="8" rx="4" fill="#ffffff" opacity="0.10"/>
+
+  <g transform="translate(560 306)">
+    <rect width="122" height="44" rx="22" fill="#f7f3ea"/>
+    <circle cx="24" cy="22" r="8" fill="#3bb5a3"/>
+    <rect x="40" y="16" width="64" height="12" rx="6" fill="#0c1117" opacity="0.75"/>
+  </g>
+</svg>

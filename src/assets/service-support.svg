@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="serviceSupportTitle">
+  <title id="serviceSupportTitle">Terminal window with passing checks and a wrench</title>
+  <defs>
+    <linearGradient id="supAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2c47c"/>
+      <stop offset="1" stop-color="#c67b26"/>
+    </linearGradient>
+    <pattern id="supGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="420" fill="#0c1117"/>
+  <rect width="800" height="420" fill="url(#supGrid)"/>
+  <circle cx="690" cy="90" r="140" fill="#3bb5a3" opacity="0.10"/>
+  <circle cx="130" cy="360" r="130" fill="#e9a94b" opacity="0.08"/>
+
+  <rect x="118" y="86" width="564" height="270" rx="18" fill="#10171f" stroke="#ffffff" stroke-opacity="0.12"/>
+  <path d="M118 132h564" stroke="#ffffff" stroke-opacity="0.10"/>
+  <circle cx="144" cy="109" r="5" fill="#e9a94b"/>
+  <circle cx="163" cy="109" r="5" fill="#ffffff" opacity="0.25"/>
+  <circle cx="182" cy="109" r="5" fill="#ffffff" opacity="0.25"/>
+  <rect x="208" y="102" width="168" height="14" rx="7" fill="#ffffff" opacity="0.06"/>
+
+  <g font-family="'Consolas', 'Courier New', monospace">
+    <text x="152" y="170" fill="#3bb5a3" font-size="16">$</text>
+    <rect x="172" y="158" width="150" height="10" rx="5" fill="#ffffff" opacity="0.20"/>
+    <rect x="152" y="190" width="56" height="9" rx="4" fill="#f2c47c" opacity="0.80"/>
+    <rect x="222" y="190" width="210" height="9" rx="4" fill="#ffffff" opacity="0.10"/>
+
+    <g transform="translate(152 218)">
+      <circle cx="9" cy="9" r="9" fill="#3bb5a3" opacity="0.18"/>
+      <path d="M4.5 9.5l3 3 6-7" fill="none" stroke="#3bb5a3" stroke-width="2"/>
+      <rect x="30" y="4" width="170" height="9" rx="4" fill="#ffffff" opacity="0.16"/>
+    </g>
+    <g transform="translate(152 250)">
+      <circle cx="9" cy="9" r="9" fill="#3bb5a3" opacity="0.18"/>
+      <path d="M4.5 9.5l3 3 6-7" fill="none" stroke="#3bb5a3" stroke-width="2"/>
+      <rect x="30" y="4" width="214" height="9" rx="4" fill="#ffffff" opacity="0.16"/>
+    </g>
+    <g transform="translate(152 282)">
+      <circle cx="9" cy="9" r="9" fill="#3bb5a3" opacity="0.18"/>
+      <path d="M4.5 9.5l3 3 6-7" fill="none" stroke="#3bb5a3" stroke-width="2"/>
+      <rect x="30" y="4" width="140" height="9" rx="4" fill="#ffffff" opacity="0.16"/>
+    </g>
+
+    <rect x="152" y="314" width="86" height="12" rx="6" fill="#e9a94b" opacity="0.9"/>
+  </g>
+
+  <g transform="translate(570 262)">
+    <circle r="56" fill="#f7f3ea"/>
+    <g transform="rotate(-35 0 0)">
+      <path d="M-12 -18a16 16 0 0 0 20 20l14 14a4.2 4.2 0 0 0 6-6l-14-14a16 16 0 0 0-20-20l8 8-6 6Z" fill="url(#supAmber)" stroke="#0c1117" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

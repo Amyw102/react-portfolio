@@ -291,8 +291,21 @@ main {
   top: 0;
   z-index: 100;
   height: var(--nav-height);
-  background: rgba(12, 17, 23, 0.86);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*
+ * The frosted-glass layer lives on a pseudo-element rather than on
+ * .site-header itself. A backdrop-filter on the header would make it the
+ * containing block for the fixed-position mobile menu, collapsing the menu to
+ * the height of the header instead of the viewport.
+ */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(12, 17, 23, 0.86);
   backdrop-filter: blur(18px);
 }
 
@@ -1585,6 +1598,23 @@ main {
   border-radius: var(--radius-lg);
   background: #fffdf8;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Full-bleed illustration at the top of each service card. The negative
+ * margins cancel the card padding so the artwork meets the rounded border. */
+.service-media {
+  margin: -38px -36px 6px;
+  border-radius: calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px) 0 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.service-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 420;
+  object-fit: cover;
 }
 
 .service-card:hover {
